@@ -45,14 +45,14 @@ int main(int argc, char** argv)
     QObject::connect(&app, &QCoreApplication::aboutToQuit, [](){ros::shutdown();});
 
     //5 second timer to publish
-    QTimer sec5;
+    QTimer sec05;
     QTimer sec1;
-    sec5.setInterval(5000);
+    sec05.setInterval(500);
     sec1.setInterval(1000);
 
     //Set up slot for 5 second timer
     int i=0;    
-    QObject::connect(&sec5, &QTimer::timeout, [&]()
+    QObject::connect(&sec05, &QTimer::timeout, [&]()
     {
         std_msgs::String msg;
         
@@ -83,7 +83,7 @@ int main(int argc, char** argv)
     engine.load(QUrl("qrc:///qml/line_display.qml"));    
 
     //Start timer
-    sec5.start();
+    sec05.start();
     sec1.start();
 
     //Start main app
