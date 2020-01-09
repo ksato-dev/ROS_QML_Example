@@ -36,6 +36,7 @@ SOURCES += \
 HEADERS += \
         include/mainwindow.h \
     include/qml_mediator.h
+    include/error_message.h
 
 FORMS += \
         ui/mainwindow.ui

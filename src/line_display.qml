@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 1.2
 import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.1
+import QtQuick.Layouts 1.1
 
 Window {
     ScrollView {
@@ -55,10 +56,12 @@ Window {
         verticalAlignment: Qt.AlignVCenter
         // verticalAlignment: Text.AlignVCenter
         // horizontalAlignment: Text.AlignHCente
-        text: "FATAL ERROR"    // "error.string" とかで QObject 派生クラスのメンバを参照できるようにする。 
+        // text: "FATAL ERROR"    // "error.string" とかで QObject 派生クラスのメンバを参照できるようにする。 
+        text: qsTr(error_message.str)
         font.family: "Helvetica"
         font.pointSize: 24
         color: "red"
+
     }
 
     visible: true

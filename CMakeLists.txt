@@ -73,7 +73,7 @@ target_link_libraries(talker_qt
 # Talker and Listener using QML gui
 
 # Run MOC on headers of Q_OBJECT classes
-set(MOC_HDRS include/qml_mediator.h)
+set(MOC_HDRS include/qml_mediator.h include/error_message.h)
 qt5_wrap_cpp(MOC_SRCS ${MOC_HDRS})
 
 # Run RCC on QRC file
